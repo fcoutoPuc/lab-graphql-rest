@@ -69,7 +69,7 @@ Para garantir comparabilidade, os endpoints selecionados nas APIs REST e GraphQL
      }
    }
 
-query {
+```query {
   user(login: "{username}") {
     repositories(first: 10) {
       nodes {
@@ -83,7 +83,7 @@ query {
   }
 }
 
-query {
+``` query {
   repository(owner: "{owner}", name: "{repo}") {
     name
     description
