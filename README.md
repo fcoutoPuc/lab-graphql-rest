@@ -32,7 +32,7 @@ Para responder a essas perguntas, realizaremos um experimento controlado utiliza
    - **Instância t2.micro da AWS EC2**: Para realizar as consultas em um ambiente controlado.
 
 6. **Tipo de Projeto Experimental:**
-   - **Controle Local** com repetições de consultas para cada endpoint.
+   - **Projeto Fatorial**
 
 7. **Quantidade de Medições:**
    - Serão realizadas entre **100 medições** para cada endpoint em ambas as APIs para obter uma média estatisticamente significativa.
