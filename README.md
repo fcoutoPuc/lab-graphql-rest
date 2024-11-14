@@ -47,55 +47,51 @@ Para garantir comparabilidade, os endpoints selecionados nas APIs REST e GraphQL
 
 ### API REST
 
-1. **Buscar informações de um usuário**
-   - Endpoint: `GET /users/{username}`
+#### Passo 1: Pegar os 100 repositórios mais famosos
+1. **Rest API** `/search/repositories?q=stars:>1&sort=stars&order=desc&per_page=100`
 
-2. **Listar repositórios de um usuário**
-   - Endpoint: `GET /users/{username}/repos?per_page=10`
-
-3. **Buscar detalhes de um repositório específico**
-   - Endpoint: `GET /repos/{owner}/{repo}`
-
-### API GraphQL
-
-1. **Buscar informações de um usuário**
+2. **GraphQL API Query**:
    ```graphql
    query {
-     user(login: "{username}") {
-       id
-       name
-       bio
-       location
-       company
+     search(query: "stars:>1", type: REPOSITORY, first: 100) {
+       nodes {
+         ... on Repository {
+           name
+           owner {
+             login
+           }
+           stargazerCount
+         }
+       }
      }
    }
+``
+3. Chamar cada endpoint 100 vezes e calcular
+   - Média
+   - Mediana
+   - Tamanho da response
 
+#### Passo 2; Pegar informações de 10 repositórios aleatórios dos top 100
+1. .**Rest API** `/repos/{owner}/{repo}`
+
+2. **GraphQL API Query**:
 ```graphql
-query {
-  user(login: "{username}") {
-    repositories(first: 10) {
-      nodes {
-        name
-        description
-        stargazerCount
-        forkCount
-        createdAt
+
+   query {
+        repository(owner: "{owner}", name: "{repo}") {
+       name
+       description
+       stargazerCount
+       forkCount
+       issues {
+         totalCount
+       }
+      createdAt
       }
-    }
-  }
-}
+   }
 ```
 
-```graphql
-query {
-  repository(owner: "{owner}", name: "{repo}") {
-    name
-    description
-    stargazerCount
-    forkCount
-    issues {
-      totalCount
-    }
-    createdAt
-  }
-}
+3. Chamar cada endpoint 100 vezes e calcular
+   - Média
+   - Mediana
+   - Tamanho da response
