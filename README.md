@@ -50,7 +50,7 @@ Para garantir comparabilidade, os endpoints selecionados nas APIs REST e GraphQL
    - Endpoint: `GET /users/{username}`
 
 2. **Listar repositórios de um usuário**
-   - Endpoint: `GET /users/{username}/repos`
+   - Endpoint: `GET /users/{username}/repos?per_page=10`
 
 3. **Buscar detalhes de um repositório específico**
    - Endpoint: `GET /repos/{owner}/{repo}`
