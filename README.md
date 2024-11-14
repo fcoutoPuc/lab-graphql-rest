@@ -77,18 +77,19 @@ Para garantir comparabilidade, os endpoints selecionados nas APIs REST e GraphQL
 2. **GraphQL API Query**:
 ```graphql
 
-   query {
-        repository(owner: "{owner}", name: "{repo}") {
-       name
-       description
-       stargazerCount
-       forkCount
-       issues {
-         totalCount
-       }
-      createdAt
-      }
-   }
+query {
+  repository(owner: "{owner}", name: "{repo}") {
+    name
+    description
+    stargazerCount
+    forkCount
+    issues {
+      totalCount
+    }
+    createdAt
+  }
+}
+
 ```
 
 3. Chamar cada endpoint 100 vezes e calcular
