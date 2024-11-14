@@ -22,6 +22,7 @@ Para responder a essas perguntas, realizaremos um experimento controlado utiliza
 3. **Variáveis Independentes:**
    - **Tipo de API**: REST vs. GraphQL.
    - **Tipo de consulta**: Diferentes endpoints para dados equivalentes nas duas APIs.
+   - **Tipo de Params**: Size, filters e etc
 
 4. **Tratamentos:**
    - **Consulta REST**: Usando endpoints REST específicos da API do GitHub.
@@ -31,10 +32,10 @@ Para responder a essas perguntas, realizaremos um experimento controlado utiliza
    - **Instância t2.micro da AWS EC2**: Para realizar as consultas em um ambiente controlado.
 
 6. **Tipo de Projeto Experimental:**
-   - **Experimento Controlado** com repetições de consultas para cada endpoint.
+   - **Controle Local** com repetições de consultas para cada endpoint.
 
 7. **Quantidade de Medições:**
-   - Serão realizadas entre **50 e 100 medições** para cada endpoint em ambas as APIs para obter uma média estatisticamente significativa.
+   - Serão realizadas entre **100 medições** para cada endpoint em ambas as APIs para obter uma média estatisticamente significativa.
 
 8. **Ameaças à Validade:**
    - **Validade Interna:** Variabilidade de rede pode afetar o tempo de resposta. Realizaremos consultas alternadas e repetidas para reduzir essa variabilidade.
