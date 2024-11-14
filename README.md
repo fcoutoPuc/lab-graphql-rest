@@ -69,7 +69,8 @@ Para garantir comparabilidade, os endpoints selecionados nas APIs REST e GraphQL
      }
    }
 
-```query {
+```graphql
+query {
   user(login: "{username}") {
     repositories(first: 10) {
       nodes {
@@ -82,8 +83,10 @@ Para garantir comparabilidade, os endpoints selecionados nas APIs REST e GraphQL
     }
   }
 }
+```
 
-``` query {
+```graphql
+query {
   repository(owner: "{owner}", name: "{repo}") {
     name
     description
