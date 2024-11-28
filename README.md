@@ -96,3 +96,24 @@ query {
    - Média
    - Mediana
    - Tamanho da response
+
+## Resultados
+
+### Comparação da média do response time REST vs GraphQL
+
+Esse gráfico compara a média do tempo de resposta das duas APIs para os dois passos registrados acima
+
+
+### Comparação da mediana do response time REST vs GraphQL
+
+Esse gráfico compara a mediana do tempo de resposta das duas APIs para os dois passos registrados acima
+
+### Comparação do tamanho da response REST vs GraphQL
+
+Esse gráfico compara o tamanho da resposta das duas APIs para os dois passos registrados acima
+
+## Conclusão
+O experimento comparou as APIs REST e GraphQL do GitHub em termos de tempo de resposta e tamanho da resposta para avaliar suas vantagens e desvantagens. 
+Os resultados indicaram que:
+- A API GraphQL foi significativamente mais rápida e retornou respostas menores em comparação com a API REST.
+- A GraphQL permitiu uma maior flexibilidade ao retornar apenas os dados solicitados, reduzindo o tempo de resposta e o tamanho das respostas, enquanto a API REST retornou dados adicionais desnecessários.
