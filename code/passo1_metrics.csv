@@ -1,0 +1,3 @@
+Step,API,MedianTime,AverageTime,ResponseSize
+Passo 1,REST,3242.5,3255.75,549286
+Passo 1,GraphQL,2793.5,2845.15,7699
